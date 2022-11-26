@@ -4,6 +4,15 @@ from tkinter import *
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
+def save():
+    website = website_entry.get() #para apanhar a informação digitada pelo musuário utilizamos o .get
+    email = email_entry.get()
+    password = password_entry.get()
+
+    with open("data.txt", "a") as data_file: #"a" refere-se a append que é acrescentar 
+        data_file.write(f"{website} | {email} | {password}")
+
+
 
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
@@ -29,14 +38,14 @@ website_entry.grid(row=1, column=1, columnspan= 2)  #COLUMNSPAN= define até qua
 website_entry.focus()  #para cursor aparecer piscando dentro do campo de entrada de website
 email_entry = Entry(width=52)
 email_entry.grid(row=2, column=1, columnspan= 2)
-email_entry.insert(0, "brunomartinsdemaira@gmail.com") #quando inicia o programa oq está inserido nesse campo já aparece previamente(talvez a última informação atualizada)
+email_entry.insert(0, "brunomart@gmail.com") #quando inicia o programa oq está inserido nesse campo já aparece previamente(talvez a última informação atualizada)
 password_entry = Entry(width=34)
 password_entry.grid(row=3, column=1)
 
 #Botoões/Buttons:
 generate_password = Button(text="Generate Password")
 generate_password.grid(row=3, column=2)
-add_button = Button(text="Add", width=44)
+add_button = Button(text="Add", width=44, command=save) #command para adiconar ação do botão
 add_button.grid(row=4, column=1, columnspan= 2)
 
 
