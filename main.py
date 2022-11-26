@@ -32,9 +32,9 @@ password_entry = Entry(width=21)
 password_entry.grid(row=3, column=1)
 
 #Botoões/Buttons:
-generate_password = Button(text="GEnerate Password")
+generate_password = Button(text="Generate Password")
 generate_password.grid(row=3, column=2)
-add_button = Radiobutton(text="Add")
+add_button = Button(text="Add")
 add_button.grid(row=4, column=1)
 
 
