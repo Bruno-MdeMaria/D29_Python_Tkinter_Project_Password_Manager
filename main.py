@@ -8,7 +8,7 @@ from tkinter import *
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
 window.title("Password Manager")
-window.config(padx=20, pady=20) #acochoamento de 20px
+window.config(padx=50, pady=50) #acochoamento de 20px
 
 canvas = Canvas(height=200, width=200)  #criar tela
 logo_image = PhotoImage(file="logo.png") #importa imagem para dentro da variavel
@@ -24,18 +24,18 @@ password_label = Label(text="Password:")
 password_label.grid(row=3, column=0)
 
 #ENTRADAS/Entrys:
-website_entry = Entry(width=35) #tamanho da janela do imput/entrada
-website_entry.grid(row=1, column=1)
-email_entry = Entry(width=35)
-email_entry.grid(row=2, column=1)
-password_entry = Entry(width=21)
+website_entry = Entry(width=52) #tamanho da janela do imput/entrada
+website_entry.grid(row=1, column=1, columnspan= 2)  #COLUMNSPAN= define até qual coluna vai a a linha
+email_entry = Entry(width=52)
+email_entry.grid(row=2, column=1, columnspan= 2)
+password_entry = Entry(width=34)
 password_entry.grid(row=3, column=1)
 
 #Botoões/Buttons:
 generate_password = Button(text="Generate Password")
 generate_password.grid(row=3, column=2)
-add_button = Button(text="Add")
-add_button.grid(row=4, column=1)
+add_button = Button(text="Add", width=44)
+add_button.grid(row=4, column=1, columnspan= 2)
 
 
 
