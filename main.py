@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import messagebox  #para importar popup
 
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
@@ -8,6 +9,10 @@ def save():
     website = website_entry.get() #para apanhar a informação digitada pelo musuário utilizamos o .get
     email = email_entry.get()
     password = password_entry.get()
+    
+    messagebox.askokcancel(title= website, message= f"Esses são os dados inseridos: \nWebsite: {website} \nE-mail: {email} \nPassword: {password} \nVocê deseja salvar?") #adionar pup up de cancelamento ou não.
+    messagebox.showinfo(title="Password Manager", message="Salvo com sucesso.")  #para adionar popup informando o salvamento.
+
 
     with open("data.txt", "a") as data_file: #"a" refere-se a append que é acrescentar 
         data_file.write(f"{website} | {email} | {password}\n")
