@@ -29,6 +29,7 @@ website_entry.grid(row=1, column=1, columnspan= 2)  #COLUMNSPAN= define até qua
 website_entry.focus()  #para cursor aparecer piscando dentro do campo de entrada de website
 email_entry = Entry(width=52)
 email_entry.grid(row=2, column=1, columnspan= 2)
+email_entry.insert(0, "brunomartinsdemaira@gmail.com") #quando inicia o programa oq está inserido nesse campo já aparece previamente(talvez a última informação atualizada)
 password_entry = Entry(width=34)
 password_entry.grid(row=3, column=1)
 
