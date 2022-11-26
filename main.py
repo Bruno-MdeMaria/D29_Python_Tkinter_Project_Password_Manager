@@ -10,7 +10,9 @@ def save():
     password = password_entry.get()
 
     with open("data.txt", "a") as data_file: #"a" refere-se a append que é acrescentar 
-        data_file.write(f"{website} | {email} | {password}")
+        data_file.write(f"{website} | {email} | {password}\n")
+        website_entry.delete(0,END) #apaga oque foi digitado no campo do caracter 0 até o final. Para receber uma nova entrada sem que o usuário precise apagar.
+        password_entry.delete(0,END)
 
 
 
