@@ -44,7 +44,6 @@ def save():
                 messagebox.showinfo(title="Password Manager", message="Salvo com sucesso.")  #para adionar popup informando o salvamento.
 
 
-
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
 window.title("Password Manager")
@@ -78,9 +77,6 @@ generate_password = Button(text="Generate Password", command=generate_password)
 generate_password.grid(row=3, column=2)
 add_button = Button(text="Add", width=44, command=save) #command para adiconar ação do botão
 add_button.grid(row=4, column=1, columnspan= 2)
-
-
-
 
 
 
