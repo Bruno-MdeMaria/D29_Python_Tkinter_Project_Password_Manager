@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter import messagebox  #para importar popup
 from random import choice, shuffle, randint
+import pyperclip
 
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
@@ -19,6 +20,7 @@ def generate_password():
 
     password = "".join(password_list)  #juntar toda a lista e transformar em uma única string
     password_entry.insert(0, password) #para preencher o imput de password com a password gerada com a função.
+    pyperclip.copy(password)  #essa biblioteca fará a mesma função de um ctrl+c e então é só colar onde o usuário quiser.
    
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
