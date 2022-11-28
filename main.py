@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter import messagebox  #para importar popup
-import random
+from random import choice, shuffle, randint
 
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
@@ -8,16 +8,13 @@ letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
 numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
 
-nr_letters = random.randint(8, 10)
-nr_symbols = random.randint(2, 4)
-nr_numbers = random.randint(2, 4)
-
 #compreção de lista: [new item for item in list]
-password_letters = [random.choice(letters) for _ in range(nr_letters)]
-password_symbols = [random.choice(symbols) for _ in range(nr_symbols)]
-password_numbers = [random.choice(numbers) for _ in range(nr_numbers)]
+password_letters = [choice(letters) for _ in range(randint(8,10))]
+password_symbols = [choice(symbols) for _ in range(randint(2,4))]
+password_numbers = [choice(numbers) for _ in range(randint(2,4))]
 
-random.shuffle(password_list)
+password_list = password_letters + password_symbols + password_numbers #junta as 3 listas em uma variavel só
+shuffle(password_list) #embaralha a lista 
 
 password = ""
 for char in password_list:
