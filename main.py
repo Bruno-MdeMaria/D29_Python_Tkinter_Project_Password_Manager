@@ -18,7 +18,7 @@ def generate_password():
     shuffle(password_list) #embaralha a lista 
 
     password = "".join(password_list)  #juntar toda a lista e transformar em uma única string
-
+    password_entry.insert(0, password) #para preencher o imput de password com a password gerada com a função.
    
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
