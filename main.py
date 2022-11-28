@@ -16,9 +16,7 @@ password_numbers = [choice(numbers) for _ in range(randint(2,4))]
 password_list = password_letters + password_symbols + password_numbers #junta as 3 listas em uma variavel só
 shuffle(password_list) #embaralha a lista 
 
-password = ""
-for char in password_list:
-  password += char
+password = "".join(password_list)  #juntar toda a lista e transformar em uma única string
 
 print(f"Your password is: {password}")
 
