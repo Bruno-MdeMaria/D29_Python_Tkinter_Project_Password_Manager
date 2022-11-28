@@ -11,7 +11,7 @@ def save():
     password = password_entry.get()
 
     if len(website) == 0 or len(password) == 0:
-        messagebox.showinfo(title="Oops", message="Por favor, certifique-se de que não deixou nenhum campo em branco.")
+        messagebox.showinfo(title="Oops", message="Por favor, certifique-se de que não deixou nenhum campo em branco.") #para apresentar uma mensgem caso tenha campos em branco e não deixe salvar.
     
     is_ok = messagebox.askokcancel(title= website, message= f"Esses são os dados inseridos: \nWebsite: {website} \nE-mail: {email} \nPassword: {password} \nVocê deseja salvar?") #adionar pup up de cancelamento ou não.
     
