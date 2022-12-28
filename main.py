@@ -25,14 +25,14 @@ def generate_password():
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 def save():
-    website = website_entry.get() #para apanhar a informação digitada pelo musuário utilizamos o .get
+    website = website_entry.get() #para apanhar a informação digitada pelo usuário utilizamos o .get
     email = email_entry.get()
     password = password_entry.get()
 
     if len(website) == 0 or len(password) == 0:
         messagebox.showinfo(title="Oops", message="Por favor, certifique-se de que não deixou nenhum campo em branco.") #para apresentar uma menssagem caso tenha campos em branco e não deixe salvar.
     
-    else:  #e para não deixar constinuar o código caso tenha campos em branco.
+    else:  #e para não deixar continuar o código caso tenha campos em branco.
         is_ok = messagebox.askokcancel(title= website, message= f"Esses são os dados inseridos: \nWebsite: {website} \nE-mail: {email} \nPassword: {password} \nVocê deseja salvar?") #adionar pup up de cancelamento ou não.
         
 
